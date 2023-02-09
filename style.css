@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Open+Sans:ital@0;1&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primary: hsl(243, 87%, 12%);
+  --secondary: hsl(238, 22%, 44%);
+  --tertiary: hsl(224, 93%, 58%);
+  --cyan: hsl(170, 45%, 43%);
+  --greyish-blue: hsl(240, 75%, 98%);
+  --light-grey: hsl(0, 0%, 75%);
+  --font-1: 'Raleway', sans-serif;
+  --font-2: 'Open Sans', sans-serif;
+  --img: url(./images/bg-curve-desktop.svg);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html {
+  margin-left: 1rem;
+  padding-right: 1rem;
+} */
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav div ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul li {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+ul :not(:last-of-type) {
+  padding-right: 1rem;
+}
+
+ul li a {
+  text-decoration: none;
+  justify-content: space-between;
+  color: var(--primary);
+}
+
+ul li a:hover {
+  color: var(--tertiary);
+}
+
+main {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-right: 1rem;
+}
+
+main .hero img {
+  width: auto;
+  height: 240px;
+}
+
+main .main h2 {
+  font-family: var(--font-1);
+  font-weight: 700;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-right: 0;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+main .main p {
+  font-family: var(--font-2);
+  color: var(--primary);
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+main form .email {
+  width: 300px;
+  height: 30px;
+  font-family: var(--font-1);
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+}
+
+main form .email:hover,
+main form .email:target {
+  font-family: var(--font-2);
+  border: var(--secondary);
+}
+
+main form .submit {
+  width: 295px;
+  padding: 0.5rem;
+  margin-left: 1.7rem;
+  font-weight: bold;
+  /* height: 20px; */
+  text-align: center;
+  color: var(--greyish-blue);
+  background-color: var(--tertiary);
+  border: none;
+  border-radius: 3px;
+}
+
+main form .submit:hover {
+  background: var(--primary);
+}
+
+article::before {
+  background: url(./images/bg-curve-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+article {
+  /* background: var(--greyish-blue); */
+  background-size: cover;
+  margin-top: 3rem;
+}
+
+article div img {
+  width: auto;
+  height: 240px;
+}
+
+article .article h2 {
+  font-family: var(--font-1);
+  /* font-weight: 400; */
+  color: var(--primary);
+  font-size: 20px;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.article p {
+  font-family: var(--font-2);
+  font-weight: 400;
+  color: var(--secondary);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+}
+
+.article a {
+  font-family: var(--font-2);
+  color: var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+  text-decoration: none;
+  padding-bottom: 8px;
+  margin-left: 7rem;
+}
+
+.article a:hover {
+  color: var(--primary);
+  cursor: pointer;
+  border-bottom: 2px solid var(--primary);
+}
+
+section {
+  background: var(--greyish-blue);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  width: 85%;
+  height: 220px;
+  background: #fff;
+  margin-left: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px rgb(0 0 0 / 0.2);
+  text-align: center;
+}
+
+.row p {
+  font-family: var(--font-2);
+  font-weight: 400;
+  color: var(--primary);
+  margin-left: 1rem;
+  text-align: start;
+}
+
+.row .d {
+  height: 15px;
+}
+
+.row img {
+  margin-top: 1rem;
+}
+
+.row .c {
+  border-radius: 100%;
+  width: auto;
+  height: 35px;
+}
+
+.lord img {
+  margin-left: 2rem;
+  margin-bottom: 0;
+  shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.lord {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 1rem;
+}
+
+.name {
+  flex-flow: column wrap;
+  margin: 0;
+  text-align: start;
+  margin-top: 1rem;
+  margin-right: 0;
+  font-family: var(--font-2);
+  color: var(--primary);
+}
+
+.name .zero {
+  font-size: 12px;
+}
+
+.name .hero {
+  font-weight: bold;
+}
+
+summary {
+  padding-top: 3rem;
+  background: var(--secondary);
+  color: #fff;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+summary h2 {
+  font-family: var(--font-1);
+  font-weight: bold;
+}
+summary p {
+  font-family: var(--font-2);
+  font-size: 13px;
+  font-synthesis: 1.2rem;
+  text-align: start;
+  padding-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+summary form .email {
+  width: 300px;
+  height: 40px;
+  font-family: var(--font-1);
+  padding-left: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+}
+
+summary form .email:hover,
+summary form .email:target {
+  font-family: var(--font-2);
+  border: var(--secondary);
+}
+
+summary form .submit {
+  width: 295px;
+  padding: 0.7rem;
+  margin-left: 1.7rem;
+  font-weight: bold;
+  /* height: 20px; */
+  text-align: center;
+  color: var(--greyish-blue);
+  background-color: var(--tertiary);
+  border: none;
+  border-radius: 3px;
+}
+
+summary form .submit:hover {
+  background: var(--primary);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--light-grey);
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem;
+}
+
+.contact-1 {
+  padding-top: 2rem;
+}
+
+.footer img {
+  padding-right: 1rem;
+}
+
+.footer p {
+  font-family: var(--font-2);
+  line-height: 2rem;
+}
+
+.contact {
+  font-family: var(--font-2);
+}
+
+footer .contact ul li {
+  list-style: none;
+  color: var(--light-grey);
+}
+
+.contact p {
+  margin-top: 2rem;
+  line-height: 1.5rem;
+}
+
+.o {
+  margin-top: 2rem !important ;
+  line-height: 1rem;
+}
+
+.terms ul li {
+  margin-top: 0.7rem;
+}
+
+.terms ul li:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 2rem 0;
+}
+
+.socials i {
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    margin-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  nav div ul :not(:last-child) {
+    padding-right: 3rem;
+  }
+
+  main {
+    margin-left: 3rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+  }
+
+  main .hero img {
+    width: auto;
+    height: 370px;
+  }
+
+  .main {
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    height: 450px;
+    justify-content: flex-start;
+  }
+
+  main .main h2 {
+    width: 75%;
+    height: auto;
+    text-align: start;
+    padding: 0;
+    margin-bottom: 0rem;
+  }
+
+  main .main p {
+    width: 75%;
+    text-align: start;
+  }
+
+  .main form {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .main form .email {
+    width: 250px;
+    margin-left: 0;
+  }
+
+  main form .submit {
+    width: 35%;
+    height: 30px;
+    padding-bottom: 19px;
+    margin-top: 2rem;
+    margin-left: 4px;
+  }
+
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 450px;
+    justify-content: flex-start;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-flow: row-reverse;
+    margin-left: 3rem;
+  }
+
+  .testimonial img {
+    width: 50%;
+    height: 300px;
+    padding-top: 2rem;
+  }
+
+  article .article h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: start;
+  }
+
+  article .article p {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  article .article .text {
+    margin-bottom: 0.6rem;
+  }
+
+  article .article a {
+    margin-left: 0;
+  }
+
+  section {
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+
+  section .box {
+    width: 32%;
+  }
+
+  section .lord {
+    margin-top: 0;
+  }
+
+  section .lord .hero {
+    font-size: 15px;
+    margin: 0 0 0 0;
+  }
+
+  .testimonial-container {
+    padding-top: 3rem;
+    display: block;
+    background-image: url(./images/bg-curve-desktop.svg);
+    padding: 20vh 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  summary {
+    height: 200px;
+  }
+
+  .access {
+    display: flex;
+    flex-direction: row;
+  }
+
+  summary div .early {
+    width: 50%;
+  }
+
+  .early h2 {
+    text-align: start;
+    margin-left: 3rem;
+    font-size: 20px;
+  }
+
+  .early p {
+    padding-top: 0.5rem;
+    font-weight: lighter;
+  }
+
+  form {
+    flex-flow: column;
+    width: 50%;
+    margin: 0;
+    text-align: start;
+  }
+
+  summary form .email {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 80%;
+  }
+
+  summary form .submit {
+    margin-top: 0;
+    width: 30%;
+    margin-top: 0.3rem;
+  }
+
+  footer .footer {
+    display: flex;
+    flex-direction: row;
+    height: 270px;
+  }
+
+  footer .contact-1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    font-size: 10px;
+    padding-right: 3rem;
+  }
+
+  footer  p{
+    width: 150px;
+  }
+
+  footer .contact {
+    padding-left: 5rem;
+    padding-top: 1.8rem;
+    font-size: 13px;
+  }
+
+  footer .terms {
+    padding-left: 10rem;
+    padding-top: 1.8rem;
+    font-size: 13px;
+  }
+
+  footer li{
+    width: 150px;
+  }
+
+  footer .socials{
+    font-size: 10px;
+    padding-left: 8rem;
+    padding-top: 3rem;
+  }
+}
